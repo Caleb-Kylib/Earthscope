@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Earthscope Surveyors - Professional Mapping & Engineering</title>
+    <meta name="description"
+        content="Explore our wide range of land surveying services including topographic mapping, boundary disputes, cadastral services, and many more.">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-compass-drafting me-2"></i>EARTHSCOPE SURVEYORS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+254700000000" class="btn btn-cta">Call Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-down">Our Services</h1>
+            <p class="lead" data-aos="fade-up">Professional solutions for every surveying challenge.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Services -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card service-boundary d-flex align-items-start gap-4" role="button" data-bs-toggle="modal" data-bs-target="#modal-boundary" tabindex="0">
+                        <div class="service-icon boundary-icon" style="flex-shrink: 0;"><i class="fa-solid fa-draw-polygon" aria-hidden="true"></i><span class="visually-hidden">Boundary survey icon</span></div>
+                        <div>
+                            <h3>Boundary Surveys</h3>
+                            <p>Determine exact property boundaries, re-establish lost mutation points, and provide
+                                official beacon certificates for legal verification.</p>
+                            <p class="service-details small text-muted d-none">Includes corner restoration, fence surveys, and easement analysis. <a href="#" class="stretched-link" tabindex="-1">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card service-topo d-flex align-items-start gap-4" role="button" data-bs-toggle="modal" data-bs-target="#modal-topo" tabindex="0">
+                        <div class="service-icon topo-icon" style="flex-shrink: 0;"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i><span class="visually-hidden">Topographic survey icon</span></div>
+                        <div>
+                            <h3>Topographic Surveys</h3>
+                            <p>Detailed mapping of natural and man-made features, elevations, and contours to assist in
+                                architectural planning and site development.</p>
+                            <p class="service-details small text-muted d-none">Includes contour plans, cross sections, and 3D terrain models. <a href="#" class="stretched-link" tabindex="-1">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card service-cadastral d-flex align-items-start gap-4" role="button" data-bs-toggle="modal" data-bs-target="#modal-cadastral" tabindex="0">
+                        <div class="service-icon cadastral-icon" style="flex-shrink: 0;"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span class="visually-hidden">Cadastral mapping icon</span></div>
+                        <div>
+                            <h3>Cadastral Mapping</h3>
+                            <p>Accurate land registry and titling support. We handle mutation forms, deed plans, and
+                                subdivision processes legally recognized in Kenya.</p>
+                            <p class="service-details small text-muted d-none">Survey plans for titles, subdivision staging and land information relief. <a href="#" class="stretched-link" tabindex="-1">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card service-gnss d-flex align-items-start gap-4" role="button" data-bs-toggle="modal" data-bs-target="#modal-gnss" tabindex="0">
+                        <div class="service-icon gnss-icon" style="flex-shrink: 0;"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i><span class="visually-hidden">RTK GNSS survey icon</span></div>
+                        <div>
+                            <h3>RTK/GNSS GPS Surveys</h3>
+                            <p>High-precision global positioning for geodetic control networks and large-scale
+                                infrastructure projects across diverse terrains.</p>
+                            <p class="service-details small text-muted d-none">Network establishment, RTK support, and precision control for engineering works. <a href="#" class="stretched-link" tabindex="-1">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card service-engineering d-flex align-items-start gap-4" role="button" data-bs-toggle="modal" data-bs-target="#modal-engineering" tabindex="0">
+                        <div class="service-icon engineering-icon" style="flex-shrink: 0;"><i class="fa-solid fa-road" aria-hidden="true"></i><span class="visually-hidden">Engineering survey icon</span></div>
+                        <div>
+                            <h3>Engineering Surveys</h3>
+                            <p>Survey controls for road construction, bridges, and building foundations, ensuring
+                                alignment and precise structural positioning.</p>
+                            <p class="service-details small text-muted d-none">Construction staking, monitoring, and as-built surveys for infrastructure. <a href="#" class="stretched-link" tabindex="-1">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card service-dispute d-flex align-items-start gap-4" role="button" data-bs-toggle="modal" data-bs-target="#modal-dispute" tabindex="0">
+                        <div class="service-icon dispute-icon" style="flex-shrink: 0;"><i class="fa-solid fa-list-check" aria-hidden="true"></i><span class="visually-hidden">Dispute resolution icon</span></div>
+                        <div>
+                            <h3>Dispute Resolution</h3>
+                            <p>Independent expert surveying to settle property line conflicts and provide
+                                court-admissible mapping exhibits.</p>
+                            <p class="service-details small text-muted d-none">Expert reports, court plots and mediation assistance. <a href="#" class="stretched-link" tabindex="-1">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modals -->
+    <!-- Boundary Surveys Modal -->
+    <div class="modal fade" id="modal-boundary" tabindex="-1" aria-labelledby="modalBoundaryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBoundaryLabel">Boundary Surveys</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We locate and mark property corners, re‑establish lost lines, and issue legally recognized beacon certificates. Our boundary surveys support transactions, title resolutions, and fence installations.</p>
+                    <img src="images/boundary-example.jpg" alt="Surveyor placing boundary marker" class="img-fluid mb-3">                    
+                    <p>Additional services include right‑of‑way staking and easement verification. For complex cases, our licensed surveyors provide court‑ready plats and expert testimony.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contact.html" class="btn btn-cta">Request this service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topographic Surveys Modal -->
+    <div class="modal fade" id="modal-topo" tabindex="-1" aria-labelledby="modalTopoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTopoLabel">Topographic Surveys</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Our topo surveys capture elevations, contours, and utility locations using total stations and GNSS. Ideal for architects, engineers, and developers planning new construction.</p>
+                    <img src="images/topo-example.jpg" alt="Contour map on computer screen" class="img-fluid mb-3">
+                    <p>Deliverables include 2D contour plans, cross‑sections, and 3D terrain visualisations in CAD or PDF format.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contact.html" class="btn btn-cta">Request this service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cadastral Mapping Modal -->
+    <div class="modal fade" id="modal-cadastral" tabindex="-1" aria-labelledby="modalCadastralLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCadastralLabel">Cadastral Mapping</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Cadastral plans for title registration, subdivisions, and land‑use planning. We liaise with the Lands Registry to ensure your documents meet statutory requirements.</p>
+                    <img src="images/cadastral-example.jpg" alt="Cadastral plan drawing" class="img-fluid mb-3">
+                    <p>Services cover mutation forms, deed plan preparation, and coordination for consent to install subdivisional roads.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contact.html" class="btn btn-cta">Request this service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GNSS Modal -->
+    <div class="modal fade" id="modal-gnss" tabindex="-1" aria-labelledby="modalGnssLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGnssLabel">RTK/GNSS GPS Surveys</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Real‑time kinematic and network‑RTK services for centimetre‑level accuracy. We support geodetic control networks, site layout and machine guidance.</p>
+                    <img src="images/gnss-example.jpg" alt="Survey equipment with GNSS antenna" class="img-fluid mb-3">
+                    <p>Typical deliverables include control point sheets, adjustment reports, and coordinate conversions.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contact.html" class="btn btn-cta">Request this service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Engineering Modal -->
+    <div class="modal fade" id="modal-engineering" tabindex="-1" aria-labelledby="modalEngineeringLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEngineeringLabel">Engineering Surveys</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Precise layout and monitoring for roads, bridges, dams and buildings. We stake foundations, set out alignments and conduct deformation monitoring.</p>
+                    <img src="images/engineering-example.jpg" alt="Surveyor marking road centreline" class="img-fluid mb-3">
+                    <p>As-built surveys, cut/fill volumes and construction progress checks available on request.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contact.html" class="btn btn-cta">Request this service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dispute Resolution Modal -->
+    <div class="modal fade" id="modal-dispute" tabindex="-1" aria-labelledby="modalDisputeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDisputeLabel">Dispute Resolution</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Neutral expert surveying for boundary conflicts and litigation support. We prepare court‑admissible plats and provide witness statements.</p>
+                    <img src="images/dispute-example.jpg" alt="Surveyor presenting map to lawyer" class="img-fluid mb-3">
+                    <p>Call us for site inspection, report writing, and peer review of third-party surveys.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contact.html" class="btn btn-cta">Request this service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-strip text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">Not sure what you need?</h2>
+            <p class="lead mb-4">Our licensed surveyors are happy to guide you on the right type of survey for your land
+                project.</p>
+            <a href="contact.html" class="btn btn-cta btn-lg">Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand text-white mb-3 d-block" href="index.html">
+                        <i class="fa-solid fa-compass-drafting me-2 text-success"></i>EARTHSCOPE
+                    </a>
+                    <p>Licensed Land Surveyors providing precision mapping and cadastral services across Kenya. Your
+                        trusted partner in land property security.</p>
+                    <div class="footer-social mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Boundary Surveys</a></li>
+                        <li><a href="services.html">Topographic Surveys</a></li>
+                        <li><a href="services.html">Cadastral Mapping</a></li>
+                        <li><a href="services.html">Subdivisions</a></li>
+                        <li><a href="services.html">GNSS/GPS Surveying</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot me-2 text-success"></i> Narok, Kenya (Near Coop Bank)
+                        </li>
+                        <li><i class="fa-solid fa-phone me-2 text-success"></i> +254 700 000 000</li>
+                        <li><i class="fa-solid fa-envelope me-2 text-success"></i> info@earthscope.co.ke</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 Earthscope Surveyors. All Rights Reserved. Licensed by the Land Surveyors
+                    Board of Kenya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

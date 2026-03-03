@@ -1,0 +1,424 @@
+/* 
+  Project: Professional Land Surveyor Website
+  Description: Custom styles for a Kenyan Land Surveying Firm
+  Author: Antigravity
+*/
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #0A2240;
+    /* Deep Blue */
+    --secondary-color: #1a3c6d;
+    --accent-color: #27ae60;
+    /* Emerald Green */
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Base Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+/* --- Navbar --- */
+.navbar {
+    padding: 1rem 0;
+    transition: var(--transition-smooth);
+    background: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.btn-cta {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    transition: var(--transition-smooth);
+}
+
+.btn-cta:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+    color: var(--white);
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.5));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 700px;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.hero-btns {
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Stats Section --- */
+.stats-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.stats-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.stats-card h3 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Services Section --- */
+.service-card {
+    border: none;
+    border-radius: 15px;
+    padding: 2rem;
+    background: var(--white);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(39, 174, 96, 0.1);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Colour coding for individual services */
+.service-boundary { border-left: 4px solid #27ae60; }
+.service-topo { border-left: 4px solid #ff6b6b; }
+.service-cadastral { border-left: 4px solid #3498db; }
+.service-gnss { border-left: 4px solid #f39c12; }
+.service-engineering { border-left: 4px solid #9b59b6; }
+.service-dispute { border-left: 4px solid #2ecc71; }
+
+/* Icon background variations (optional override) */
+.boundary-icon { background: rgba(39, 174, 96, 0.1); color: #27ae60; }
+.topo-icon { background: rgba(255, 107, 107, 0.1); color: #ff6b6b; }
+.cadastral-icon { background: rgba(52, 152, 219, 0.1); color: #3498db; }
+.gnss-icon { background: rgba(243, 156, 18, 0.1); color: #f39c12; }
+.engineering-icon { background: rgba(155, 89, 182, 0.1); color: #9b59b6; }
+.dispute-icon { background: rgba(46, 204, 113, 0.1); color: #2ecc71; }
+
+/* Hover effect reveals a snippet */
+.service-details {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+.service-card:hover .service-details {
+    opacity: 1;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+/* Slight tilt/scale on hover for depth */
+.service-card:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(2deg);
+    box-shadow: var(--shadow-medium);
+}
+
+/* --- Why Choose Us --- */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+/* --- CTA Strip --- */
+.cta-strip {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 0;
+}
+
+/* --- Floating WhatsApp --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* --- Form Styling --- */
+.form-control {
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(39, 174, 96, 0.1);
+    border-color: var(--accent-color);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stats-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* --- Inner Page Header --- */
+.page-header {
+    background: var(--primary-color);
+    padding: 8rem 0 6rem;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- About Page: Values --- */
+.value-card {
+    padding: 2.5rem;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    height: 100%;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.value-icon {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.illustration-box {
+    background: var(--bg-light);
+    border-radius: 30px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Map Container --- */
+.map-container {
+    height: 450px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+/* --- Unique Footer --- */
+.footer {
+    background: #051326;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5rem 0 2rem;
+}
+
+.footer h4 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white);
+    margin-right: 10px;
+    transition: var(--transition-smooth);
+}
+
+.footer-social a:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
