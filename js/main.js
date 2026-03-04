@@ -74,4 +74,129 @@ document.addEventListener('DOMContentLoaded', () => {
             */
         });
     }
+
+    // 5. Testimonial Carousel
+    const initTestimonialCarousel = () => {
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const wrapper = document.querySelector('.testimonials-wrapper');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+        
+        if (!testimonialCards.length || !wrapper) return;
+
+        let currentIndex = 0;
+        let cardsPerView = getCardsPerView();
+        let autoPlayInterval;
+
+        // Determine how many cards to show based on screen width
+        function getCardsPerView() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        // Calculate max index based on cards per view
+        function getMaxIndex() {
+            return Math.max(0, testimonialCards.length - cardsPerView);
+        }
+
+        // Create indicator dots
+        function createIndicators() {
+            indicatorsContainer.innerHTML = '';
+            const maxIndex = getMaxIndex();
+            
+            for (let i = 0; i <= maxIndex; i++) {
+                const dot = document.createElement('button');
+                dot.className = `indicator-dot ${i === 0 ? 'active' : ''}`;
+                dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                    resetAutoPlay();
+                });
+                indicatorsContainer.appendChild(dot);
+            }
+        }
+
+        // Update carousel position and indicators
+        function updateCarousel() {
+            const maxIndex = getMaxIndex();
+            currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+            
+            const cardWidth = testimonialCards[0].offsetWidth;
+            const gap = 24; // 1.5rem in pixels
+            const translateValue = -currentIndex * (cardWidth + gap);
+            
+            wrapper.style.transform = `translateX(${translateValue}px)`;
+
+            // Update button states
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === maxIndex;
+
+            // Update indicators
+            document.querySelectorAll('.indicator-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        // Auto-play functionality
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                const maxIndex = getMaxIndex();
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            }, 8000); // Change testimonial every 8 seconds
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            updateCarousel();
+            resetAutoPlay();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            updateCarousel();
+            resetAutoPlay();
+        });
+
+        // Stop auto-play on hover
+        wrapper.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const newCardsPerView = getCardsPerView();
+            if (newCardsPerView !== cardsPerView) {
+                cardsPerView = newCardsPerView;
+                currentIndex = 0;
+                createIndicators();
+                updateCarousel();
+            }
+        });
+
+        // Initialize on page load
+        createIndicators();
+        updateCarousel();
+        startAutoPlay();
+    };
+
+    // Initialize carousel when DOM is ready
+    setTimeout(initTestimonialCarousel, 100);
 });
