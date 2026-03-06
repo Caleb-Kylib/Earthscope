@@ -143,6 +143,19 @@ a {
     }
 }
 
+/* --- Card Flip Animation --- */
+@keyframes cardFlip {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotateY(15deg) rotateX(-8deg) translateY(-10px);
+    }
+    100% {
+        transform: rotateY(-5deg) rotateX(-3deg) translateY(-8px);
+    }
+}
+
 /* --- Stats Section --- */
 .stats-card {
     background: var(--white);
@@ -174,11 +187,13 @@ a {
     box-shadow: var(--shadow-soft);
     transition: var(--transition-smooth);
     height: 100%;
+    perspective: 1000px;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
+    transform: rotateY(10deg) rotateX(-5deg) translateY(-8px);
     box-shadow: var(--shadow-medium);
+    animation: cardFlip 0.6s ease-in-out forwards;
 }
 
 .service-icon {
@@ -322,6 +337,37 @@ a {
     margin-bottom: 1rem;
 }
 
+/* --- Page Banners --- */
+.about-banner {
+    background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('../assets/img/prince-akachi-4Yv84VgQkRM-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-banner {
+    background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('../assets/img/survey1\ \(3\).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-banner {
+    background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('../assets/img/contact.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-banner {
+    background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('../assets/img/blog1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-banner {
+    background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('../assets/img/field-work1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 /* --- About Page: Values --- */
 .value-card {
     padding: 2.5rem;
@@ -332,11 +378,13 @@ a {
     height: 100%;
     transition: var(--transition-smooth);
     border: 1px solid rgba(0, 0, 0, 0.03);
+    perspective: 1000px;
 }
 
 .value-card:hover {
-    transform: translateY(-10px);
+    transform: rotateY(12deg) rotateX(-8deg) translateY(-10px);
     box-shadow: var(--shadow-medium);
+    animation: cardFlip 0.6s ease-in-out forwards;
 }
 
 .value-icon {
