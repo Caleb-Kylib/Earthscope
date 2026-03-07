@@ -250,16 +250,18 @@ a {
     padding: 0;
 }
 
+/* list behaves like a bootstrap row, items split into two columns */
 .feature-list li {
     margin-bottom: 1.2rem;
     display: flex;
-    align-items: center;
+    align-items: start; /* icon aligns with first line of text */
 }
 
 .feature-list i {
     color: var(--accent-color);
     margin-right: 1rem;
     font-size: 1.2rem;
+    margin-top: 0.2rem; /* give icon a little top offset for better vertical alignment */
 }
 
 /* --- CTA Strip --- */
